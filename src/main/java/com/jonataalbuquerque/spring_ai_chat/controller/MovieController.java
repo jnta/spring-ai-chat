@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jonataalbuquerque.spring_ai_chat.dto.MovieRecommendation;
 
 @RestController
-public class AIController {
+public class MovieController {
 
     private final ChatClient chatClient;
 
-    public AIController(ChatClient.Builder builder) {
+    public MovieController(ChatClient.Builder builder) {
         this.chatClient = builder
                 .defaultAdvisors(new SimpleLoggerAdvisor())
                 .build();
